@@ -1,0 +1,11 @@
+description: tf_keras_cvae
+environment:
+  image: "determinedai/environments:cuda-10.1-pytorch-1.7-lightning-1.2-tf-2.4-gpu-0.9.0"
+hyperparameters:
+records_per_epoch: 
+searcher:
+  name: single
+  metric: val_loss
+  smaller_is_better: false
+  max_length: 
+entrypoint: model_def:CVAE
